@@ -1,0 +1,15 @@
+model,display_name,provider,tier,model_version
+claude-opus-4-6,Opus 4.6,Anthropic,Frontier,claude-opus-4-6
+gpt-5-4,GPT-5.4,OpenAI,Frontier,gpt-5.4
+gemini-2-5-pro,Gemini 2.5 Pro,Google,Frontier,google/gemini-2.5-pro
+grok-4-20,Grok 4.20,xAI,Frontier,x-ai/grok-4.20
+claude-sonnet-4-6,Sonnet 4.6,Anthropic,Mid,claude-sonnet-4-6
+gpt-4o,GPT-4o,OpenAI,Mid,openai/gpt-4o-2024-11-20
+gemini-2-5-flash,Gemini 2.5 Flash,Google,Mid,google/gemini-2.5-flash
+claude-haiku-4-5,Haiku 4.5,Anthropic,Mini,claude-haiku-4-5-20251001
+gpt-5-4-mini,GPT-5.4 mini,OpenAI,Mini,gpt-5.4-mini
+gemini-2-5-flash-lite,Gemini 2.5 Flash-Lite,Google,Mini,google/gemini-2.5-flash-lite
+grok-4-1-fast,Grok 4.1 Fast,xAI,Mini,x-ai/grok-4.1-fast
+llama-4-maverick,Llama 4 Maverick,Meta,Open-weight,meta-llama/llama-4-maverick
+deepseek-v3-2,DeepSeek V3.2,DeepSeek,Open-weight,deepseek/deepseek-v3.2
+mistral-large,Mistral Large,Mistral,Open-weight,mistralai/mistral-large-2512
