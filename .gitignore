@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Quarto / rendered preview artifacts
+*.html
+*_files/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Editor / OS cruft
+*~
+*.swp
+Thumbs.db
