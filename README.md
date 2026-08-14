@@ -1,6 +1,6 @@
 # FairFund-Bench
 
-**Evaluating Deservingness Bias in LLM Allocation Decisions**
+**Evaluating Distributive Bias in LLM Resource Allocation**
 
 FairFund-Bench is a benchmark for evaluating demographic bias
 in how large language models allocate scarce resources. It presents models
@@ -10,12 +10,13 @@ comparison context (single vs. multi-stimulus), and whether demographic
 differences are made transparent or disguised. Varying these characteristics shows how conclusions
 about LLM bias depend on auditing choices.
 
-The benchmark comprises 600 human-authored aid requests (calibrated against
-1.3M real GoFundMe campaigns) spanning three need domains, four race and two
-gender categories (signalled via validated names), and five causal framings
-of need drawn from welfare deservingness theory. It scores models on four
-pillars: demographic bias, normative alignment, cross-task consistency, and
-cross-context consistency.
+The benchmark comprises 600 human-authored, English-language aid requests
+(calibrated against 1.3M real GoFundMe campaigns) spanning three need domains,
+four race and two gender categories (signalled via validated names), and five
+causal framings of need drawn from welfare deservingness theory. Each appeal
+is rendered with five validated names, giving a 3,000-stimulus universe. It
+scores models on four pillars: demographic bias, deservingness alignment,
+cross-task consistency, and cross-context consistency.
 
 ## Repository layout
 
@@ -45,6 +46,23 @@ base <- outcomes |> filter(wording_variant == "base", valid == TRUE)
 import pandas as pd
 outcomes = pd.read_csv("data/outcomes.csv")
 base = outcomes.query("wording_variant == 'base' & valid")
+```
+
+## Paper
+
+The accompanying paper is at
+[arXiv:2607.28934](https://arxiv.org/abs/2607.28934).
+
+```bibtex
+@misc{lukk2026fairfund,
+  title  = {FairFund-Bench: Evaluating Distributive Bias in LLM Resource Allocation},
+  author = {Martin Lukk},
+  year   = {2026},
+  eprint = {2607.28934},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url    = {https://arxiv.org/abs/2607.28934}
+}
 ```
 
 ## License

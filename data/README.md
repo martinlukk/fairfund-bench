@@ -1,7 +1,7 @@
 # FairFund-Bench — Model Output Dataset
 
-Companion data for *FairFund-Bench: Evaluating Deservingness Bias in LLM
-Allocation Decisions*: parsed responses from 14 LLMs to
+Companion data for *FairFund-Bench: Evaluating Distributive Bias in LLM
+Resource Allocation*: parsed responses from 14 LLMs to
 the benchmark, together with the stimuli they were shown and the model lineup.
 
 ## Files
@@ -27,7 +27,9 @@ Each of the 14 LLMs evaluated 600 single-stimulus prompts (the Rate task) and
 - **Four × two demographics** — race (White / Black / Hispanic / Asian) × gender (Male / Female), signalled by validated names ([Elder & Hayes 2023](https://www.journals.uchicago.edu/doi/abs/10.1086/723820)).
 - **Seven bundle types** — race, gender, and framing, each presented both transparently (a within-prompt minimal pair) and disguised (the focal axis co-varies with scenario), plus an intersectional race × gender bundle.
 
-The accompanying paper gives the full benchmark design and the main results.
+All stimuli are English-language. The accompanying paper
+([arXiv:2607.28934](https://arxiv.org/abs/2607.28934)) gives the full
+benchmark design and the main results.
 
 ## Loading
 
