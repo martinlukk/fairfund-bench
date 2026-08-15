@@ -1,0 +1,16 @@
+# FairFund-Bench benchmark toolkit — Python dependencies.
+# Covers the runner (fairfund.py), parser (parse.py), instrument build
+# (compose_bundles.py, render.py, build_instrument.py), and scorer (score.py).
+# Reproduction scripts under analysis/ are R and carry their own dependencies.
+#
+# Floors are minimums expected to work; the toolkit was developed and tested
+# with: inspect_ai 0.3.240, pandas 3.0.1, numpy 2.4.2, pyyaml 6.0.3.
+# inspect_ai's log/task API changes across releases — pin it if a runner or
+# parser call stops resolving.
+
+# Scoring the released data/outcomes.csv needs only pandas + numpy; inspect_ai
+# is required by the runner (fairfund.py) and by parse.py (it reads .eval logs).
+inspect_ai>=0.3.240
+pandas>=2.0
+numpy>=1.24
+pyyaml>=6.0

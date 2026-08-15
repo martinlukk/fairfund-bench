@@ -28,7 +28,7 @@ accompanying paper; they are found alongside `base` and can readily be filtered 
 | `comparison_context`  | string  | `single` for Rate; `multi` for all bundle types. Matches the paper's single- vs. multi-stimulus distinction. |
 | `mode`                | string  | Presentation mode within multi-stimulus prompts: `transparent` (focal axis varies, all else held fixed) or `disguised` (focal axis co-varies with scenario via a Latin/Graeco-Latin square). `NA` for Rate (mode is undefined outside multi-stimulus). |
 | `focal_axis`          | string  | The within-bundle contrast the bundle identifies: `race`, `gender`, `intersectional`, or `framing`. `NA` for Rate (no within-bundle contrast). |
-| `unit_id`           | string  | Rate: `stimulus_id`. Rank/Allocate: `bundle_id`. |
+| `unit_id`           | string  | Rate: `stimulus_id`. Rank/Allocate: `bundle_id`; the claimants and their order for each bundle are in `benchmark/bundles.csv`. |
 | `bundle_size`       | int     | Number of claimants in the prompt (1 for Rate; 2/4/5 for bundles). |
 | `position`          | int     | 1-indexed position of the claimant within the prompt. Always 1 for Rate. |
 | `stimulus_id`       | string  | The request shown at this position; key to `stimuli.csv`. |

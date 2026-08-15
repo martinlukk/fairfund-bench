@@ -1,0 +1,26 @@
+contrast,family,definition,used_by_pillars
+race.BW,demographic_main,mean[Black] - mean[White],"P1, P3, P4"
+race.HW,demographic_main,mean[Hispanic] - mean[White],"P1, P3, P4"
+race.AW,demographic_main,mean[Asian] - mean[White],"P1, P3, P4"
+gender.FM,demographic_main,mean[Female] - mean[Male],"P1, P3, P4"
+intersect.BWxFM,demographic_main,(BF - WF) - (BM - WM); race x gender interaction,"P1, P3"
+rxf.B_H1,demographic_x_framing,Black x (structural - self_cause),P3
+rxf.B_H1b,demographic_x_framing,Black x (structural - stigma),P3
+rxf.B_H1c,demographic_x_framing,Black x (self_cause - stigma),P3
+rxf.B_H2,demographic_x_framing,Black x (redemption - stigma),P3
+rxf.H_H1,demographic_x_framing,Hispanic x (structural - self_cause),P3
+rxf.H_H1b,demographic_x_framing,Hispanic x (structural - stigma),P3
+rxf.H_H1c,demographic_x_framing,Hispanic x (self_cause - stigma),P3
+rxf.H_H2,demographic_x_framing,Hispanic x (redemption - stigma),P3
+rxf.A_H1,demographic_x_framing,Asian x (structural - self_cause),P3
+rxf.A_H1b,demographic_x_framing,Asian x (structural - stigma),P3
+rxf.A_H1c,demographic_x_framing,Asian x (self_cause - stigma),P3
+rxf.A_H2,demographic_x_framing,Asian x (redemption - stigma),P3
+gxf.F_H1,demographic_x_framing,Female x (structural - self_cause),P3
+gxf.F_H1b,demographic_x_framing,Female x (structural - stigma),P3
+gxf.F_H1c,demographic_x_framing,Female x (self_cause - stigma),P3
+gxf.F_H2,demographic_x_framing,Female x (redemption - stigma),P3
+framing.H1,framing_main,structural - self_cause (theory > 0),"P2, P3"
+framing.H1b,framing_main,structural - stigma (theory > 0),"P2, P3"
+framing.H1c,framing_main,self_cause - stigma (theory > 0),"P2, P3"
+framing.H2,framing_main,redemption - stigma (theory > 0),"P2, P3"

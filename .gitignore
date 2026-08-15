@@ -20,3 +20,16 @@ __pycache__/
 *~
 *.swp
 Thumbs.db
+
+# Benchmark: provides instrument.json (runner input, ready to run on new models);
+# instrument.csv is a regenerable human-readable convenience file.
+benchmark/instrument.csv
+
+# Inspect runner output
+logs/
+
+# Scoring outputs when running the benchmark on your own model
+# (parse.py and score.py write these next to your input files)
+*_outcomes.csv
+*_outcomes_leaderboard.csv
+*_outcomes_leaderboard.md
