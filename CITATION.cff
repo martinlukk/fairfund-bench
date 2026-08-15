@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+title: "FairFund-Bench: Evaluating Distributive Bias in LLM Resource Allocation"
+message: >-
+  If you use FairFund-Bench, please cite the accompanying paper. To cite a
+  specific release of the benchmark or dataset, add the Zenodo DOI below.
+type: software
+authors:
+  - family-names: Lukk
+    given-names: Martin
+    orcid: "https://orcid.org/0000-0001-7569-4068"
+abstract: >-
+  A benchmark for evaluating bias in how large language models allocate
+  scarce resources. It presents models with realistic financial aid
+  requests and systematically varies the audit design — the elicitation task
+  (rating, ranking, dollar allocation), the comparison context (single vs.
+  multi-stimulus), and whether demographic differences are made transparent or
+  disguised. The benchmark comprises 600 human-authored, English-language aid
+  requests (calibrated against 1.3M real GoFundMe campaigns) spanning three
+  need domains, four race and two gender categories (signalled via validated
+  names), and five causal framings of need drawn from welfare deservingness
+  theory, each rendered with five validated names for a 3,000-stimulus
+  universe. It scores models on four pillars: demographic bias, deservingness
+  alignment, cross-task consistency, and cross-context consistency. Includes
+  the instrument, parsed responses from 14 LLMs, and scripts reproducing the
+  published figures.
+version: 1.0.0
+date-released: "2026-08-15"
+repository-code: "https://github.com/martinlukk/fairfund-bench"
+url: "https://github.com/martinlukk/fairfund-bench"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - large language models
+  - algorithmic fairness
+  - distributive justice
+  - benchmark
+  - resource allocation
+  - audit design
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21959599
+    description: Concept DOI for all versions of this repository.
+  - type: doi
+    value: 10.5281/zenodo.21959600
+    description: DOI for the v1.0.0 archive.
+preferred-citation:
+  type: article
+  title: "FairFund-Bench: Evaluating Distributive Bias in LLM Resource Allocation"
+  authors:
+    - family-names: Lukk
+      given-names: Martin
+      orcid: "https://orcid.org/0000-0001-7569-4068"
+  year: 2026
+  doi: 10.48550/arXiv.2607.28934
+  url: "https://arxiv.org/abs/2607.28934"
+  notes: "arXiv preprint arXiv:2607.28934 [cs.CL]"

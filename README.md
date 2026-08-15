@@ -2,7 +2,9 @@
 
 **Evaluating Distributive Bias in LLM Resource Allocation**
 
-FairFund-Bench is a benchmark for evaluating demographic bias
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21959599.svg)](https://doi.org/10.5281/zenodo.21959599)
+
+FairFund-Bench is a benchmark for evaluating bias
 in how large language models allocate scarce resources. It presents models
 with realistic financial aid requests and systematically varies the audit
 design — the elicitation task (rating, ranking, dollar allocation), the
@@ -61,9 +63,15 @@ The accompanying paper is at
   eprint = {2607.28934},
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
+  doi    = {10.48550/arXiv.2607.28934},
   url    = {https://arxiv.org/abs/2607.28934}
 }
 ```
+
+To cite the benchmark and dataset themselves, use the archived release
+[10.5281/zenodo.21959599](https://doi.org/10.5281/zenodo.21959599), which
+always resolves to the most recent version. Machine-readable metadata is in
+[`CITATION.cff`](CITATION.cff).
 
 ## License
 
