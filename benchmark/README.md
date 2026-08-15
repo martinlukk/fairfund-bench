@@ -119,6 +119,9 @@ pip install -r benchmark/requirements.txt
 inspect eval benchmark/fairfund.py --model openai/gpt-4o
 #    Optionally restrict to one task:
 inspect eval benchmark/fairfund.py --model openai/gpt-4o -T task=rate
+#    Some providers reject `temperature` (OpenAI reasoning models return
+#    HTTP 400 and the run aborts before the first sample). Omit it with:
+inspect eval benchmark/fairfund.py --model openai/gpt-5.6-sol -T temperature=null
 
 # 2. Parse the log(s) into the released outcomes schema.
 python benchmark/parse.py logs/ -o gpt-4o_outcomes.csv
@@ -134,6 +137,11 @@ python benchmark/score.py --outcomes gpt-4o_outcomes.csv \
 models can be passed together to pool them into one `outcomes.csv`. The model
 column is Inspect's `provider/model` string, and `retry_count` is `0` (Inspect
 handles transport retries internally).
+
+`-T temperature=null` drops the parameter from the request rather than setting
+a value, so the model answers at its provider-side default. That is a
+deviation from the instrument's temperature-0 protocol and should be reported
+alongside any score obtained that way.
 
 ## Score a model
 

@@ -19,6 +19,13 @@ Task:      The FairFund-Bench Inspect runner (step 2 of the pipeline in
 
              inspect eval benchmark/fairfund.py --model openai/gpt-4o -T task=rate
 
+           Some providers reject `temperature` outright (OpenAI reasoning
+           models return HTTP 400). Omit the parameter for those, and note
+           in any writeup that the run is at the provider default, not 0:
+
+             inspect eval benchmark/fairfund.py --model openai/gpt-5.6-sol \
+                 -T temperature=null
+
 Inputs:    benchmark/instrument.json  (build with build_instrument.py)
 Outputs:   an Inspect .eval log under ./logs (parsed by benchmark/parse.py)
 
@@ -73,14 +80,18 @@ def _load_samples(task_filter: str | None) -> list[Sample]:
 
 # 2. Task -----------------------------------------------------------------
 @task
-def fairfund(task: str | None = None) -> Task:
+def fairfund(task: str | None = None,
+             temperature: float | None = 0.0) -> Task:
     """FairFund-Bench instrument. `task` optionally restricts to one of
-    rate / rank / allocate (default: all three)."""
+    rate / rank / allocate (default: all three). `temperature` is the
+    instrument's setting (0); pass `-T temperature=null` to omit the
+    parameter for models that reject it (e.g. OpenAI reasoning models)."""
     if task is not None and task not in TASKS:
         raise SystemExit(f"task must be one of {TASKS}, got {task!r}.")
     return Task(
         dataset=MemoryDataset(_load_samples(task)),
         solver=generate(),
         # No scorer: completions are recorded and scored by benchmark/score.py.
-        config=GenerateConfig(temperature=0.0),
+        # temperature=None is dropped from the request entirely.
+        config=GenerateConfig(temperature=temperature),
     )
