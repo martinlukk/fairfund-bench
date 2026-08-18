@@ -90,7 +90,10 @@ p_wide <- p +
         legend.text      = element_text(size = 10),
         legend.key.width = unit(0.9, "lines"))
 
+# bg = "white" is required: the default is transparent, which renders as
+# black-on-dark and is unreadable in GitHub's dark theme.
 ggsave(file.path(FIG_DIR, "fig05_equal_split_wide.png"), p_wide,
-       width = 7, height = 4.2, dpi = 300, device = ragg::agg_png)
+       width = 7, height = 4.2, dpi = 300, bg = "white",
+       device = ragg::agg_png)
 
 cat("Wrote", file.path(FIG_DIR, "fig05_equal_split_wide.png"), "\n")
