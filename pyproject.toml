@@ -12,7 +12,7 @@
 
 [project]
 name = "fairfund-bench"
-version = "1.0.0"
+version = "1.1.0"
 description = "A benchmark for evaluating distributive bias in LLM resource allocation."
 readme = "README.md"
 requires-python = ">=3.10"

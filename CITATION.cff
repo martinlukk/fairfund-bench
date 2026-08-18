@@ -23,8 +23,8 @@ abstract: >-
   alignment, cross-task consistency, and cross-context consistency. Includes
   the instrument, parsed responses from 14 LLMs, and scripts reproducing the
   published figures.
-version: 1.0.0
-date-released: "2026-08-15"
+version: 1.1.0
+date-released: "2026-08-18"
 repository-code: "https://github.com/martinlukk/fairfund-bench"
 url: "https://github.com/martinlukk/fairfund-bench"
 license:
@@ -41,9 +41,6 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.21959599
     description: Concept DOI for all versions of this repository.
-  - type: doi
-    value: 10.5281/zenodo.21959600
-    description: DOI for the v1.0.0 archive.
 preferred-citation:
   type: article
   title: "FairFund-Bench: Evaluating Distributive Bias in LLM Resource Allocation"
