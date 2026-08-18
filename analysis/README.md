@@ -6,9 +6,13 @@ from the released responses in `../data/`. The leaderboard in the paper comes fr
 
 | Script | Paper figure | Output |
 |---|---|---|
-| `01-render_equal_split.R`     | Figure 5 | `figures/fig05_equal_split.pdf` |
+| `01-render_equal_split.R`     | Figure 5 | `figures/fig05_equal_split.pdf`, `figures/fig05_equal_split_wide.png` |
 | `02-render_demographic_gap.R` | Figure 6 | `figures/fig06_demographic_gap.pdf` |
 | `03-render_framing.R`         | Figure 7 | `figures/fig07_framing.pdf` |
+
+Script 01 also writes a wider PNG of the same figure, used as the preview in
+the root `README.md`. It is the same plot at README proportions, not a
+different analysis.
 
 `lib/common.R` is sourced by all three analysis scripts. It reads `../data/outcomes.csv`,
 filters to `wording_variant == "base" & valid`, and sets the appropriate factor
@@ -26,5 +30,5 @@ Rscript analysis/03-render_framing.R
 
 Each script prints the quantities behind its figure and writes a PDF to
 `analysis/figures/`. Requires `tidyverse` and `here`, plus a cairo-capable R
-build for `cairo_pdf`; script 03 additionally needs `lme4`, `lmerTest`, and
-`emmeans`.
+build for `cairo_pdf`; script 01 additionally needs `ragg` for the PNG preview,
+and script 03 needs `lme4`, `lmerTest`, and `emmeans`.

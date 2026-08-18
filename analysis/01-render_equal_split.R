@@ -7,6 +7,7 @@
 ## Input:     data/outcomes.csv
 ##            data/models.csv
 ## Output:    analysis/figures/fig05_equal_split.pdf
+##            analysis/figures/fig05_equal_split_wide.png (README preview)
 ##
 ## Project:   fairfund-bench
 ## Author:    Martin Lukk / 2026-08-13 (created)
@@ -81,3 +82,15 @@ ggsave(file.path(FIG_DIR, "fig05_equal_split.pdf"), p,
        width = 3.3, height = 2.9, device = cairo_pdf)
 
 cat("Wrote", file.path(FIG_DIR, "fig05_equal_split.pdf"), "\n")
+
+# 5. README Preview PNG ---------------------------------------------------
+p_wide <- p +
+  theme(text             = element_text(size = 11),
+        axis.text.x      = element_text(size = 10),
+        legend.text      = element_text(size = 10),
+        legend.key.width = unit(0.9, "lines"))
+
+ggsave(file.path(FIG_DIR, "fig05_equal_split_wide.png"), p_wide,
+       width = 7, height = 4.2, dpi = 300, device = ragg::agg_png)
+
+cat("Wrote", file.path(FIG_DIR, "fig05_equal_split_wide.png"), "\n")
