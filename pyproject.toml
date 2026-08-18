@@ -1,0 +1,44 @@
+# FairFund-Bench — packaging metadata.
+#
+# Exists so the benchmark installs with `uv sync` (a requirement for the
+# externally-hosted eval registration in inspect_evals). Not published to
+# PyPI. The runner is invoked by path, not imported as a library:
+#
+#     uv sync
+#     uv run inspect eval benchmark/fairfund.py --model openai/gpt-4o
+#
+# Dependencies mirror benchmark/requirements.txt; keep the two in step.
+# `version` mirrors CITATION.cff; bump both together when cutting a release.
+
+[project]
+name = "fairfund-bench"
+version = "1.0.0"
+description = "A benchmark for evaluating distributive bias in LLM resource allocation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Martin Lukk" }]
+keywords = [
+    "large language models",
+    "algorithmic fairness",
+    "distributive justice",
+    "benchmark",
+    "resource allocation",
+    "audit design",
+]
+dependencies = [
+    "inspect_ai>=0.3.240",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Repository = "https://github.com/martinlukk/fairfund-bench"
+Paper = "https://arxiv.org/abs/2607.28934"
+Archive = "https://doi.org/10.5281/zenodo.21959599"
+
+# The repository ships scripts run by path, not an importable package, so
+# there is nothing to build or install beyond the dependencies above.
+[tool.uv]
+package = false

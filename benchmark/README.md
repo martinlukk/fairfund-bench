@@ -16,8 +16,7 @@ The pipeline runs in four steps, one script each:
 
 `instrument.json` ships with the repository, so a new model starts at step 2.
 The runner uses [Inspect](https://inspect.aisi.org.uk/) (`pip install
-inspect_ai`); the parser and scorer are plain Python (`pandas`, `numpy`,
-`scipy`).
+inspect_ai`); the parser and scorer are plain Python (`pandas`, `numpy`).
 
 ## Instrument inputs
 
