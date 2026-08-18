@@ -22,14 +22,13 @@ abstract: >-
   universe. It scores models on four pillars: demographic bias, deservingness
   alignment, cross-task consistency, and cross-context consistency. Includes
   the instrument, parsed responses from 14 LLMs, and scripts reproducing the
-  published figures.
+  published figures. Code is released under the MIT License; the response
+  dataset under CC-BY-4.0.
 version: 1.1.0
 date-released: "2026-08-18"
 repository-code: "https://github.com/martinlukk/fairfund-bench"
 url: "https://github.com/martinlukk/fairfund-bench"
-license:
-  - MIT
-  - CC-BY-4.0
+license: MIT
 keywords:
   - large language models
   - algorithmic fairness
@@ -37,10 +36,6 @@ keywords:
   - benchmark
   - resource allocation
   - audit design
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.21959599
-    description: Concept DOI for all versions of this repository.
 preferred-citation:
   type: article
   title: "FairFund-Bench: Evaluating Distributive Bias in LLM Resource Allocation"
